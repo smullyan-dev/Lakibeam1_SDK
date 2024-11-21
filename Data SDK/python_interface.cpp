@@ -21,7 +21,7 @@ void close_lidar()
     }
 }
 
-boolean get_scan(repark_t & scan)
+bool get_scan(repark_t & scan)
 {
     if(drv!=NULL)
     {
