@@ -27,6 +27,7 @@ bool get_scan(repark_t & scan)
     {
         return drv->get_repackedpack(scan);
     }
+    return false;
 }
 
 class Cleanup {
