@@ -21,11 +21,11 @@ void close_lidar()
     }
 }
 
-void get_scan(repark_t & scan)
+boolean get_scan(repark_t & scan)
 {
     if(drv!=NULL)
     {
-        drv->get_repackedpack(scan);
+        return drv->get_repackedpack(scan);
     }
 }
 
