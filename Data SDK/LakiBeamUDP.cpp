@@ -15,7 +15,7 @@ LakiBeamUDP::LakiBeamUDP(string local_ip, string local_port, string laser_ip, st
     char *temp = reinterpret_cast<char *>(udprepack);
     memset(temp, 0, CONFIG_MAX_REPACK * sizeof(repark_t));
 
-    local_ep = new udp_endpoint_t(address_t::from_string("0.0.0.0"), atoi(local_port.c_str()));
+    local_ep = new udp_endpoint_t(address_t::from_string(local_ip), atoi(local_port.c_str()));
     laser_ep = new udp_endpoint_t(address_t::from_string(laser_ip), atoi(laser_port.c_str()));
     socket = new udp_socket_t(io_servicess);
     socket->open(local_ep->protocol());

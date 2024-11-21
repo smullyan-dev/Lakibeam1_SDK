@@ -160,6 +160,7 @@ struct repark_t
     u16_t maxdots;                             ///< 点位个数
     cicle_pack_t dotcloud[CONFIG_CIRCLE_DOTS]; ///< 深度数据点云
 };
+
 #pragma pack(pop)
 
 class LakiBeamUDP
